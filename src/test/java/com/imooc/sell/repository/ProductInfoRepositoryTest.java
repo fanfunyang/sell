@@ -37,4 +37,9 @@ public class ProductInfoRepositoryTest {
         List<ProductInfo> result=repository.findByProductStatus(0);
         Assert.assertNotEquals(0,result.size());
     }
+    @Test
+    public void findById() {
+        ProductInfo productInfo=repository.getOne("001");
+        Assert.assertNotNull(productInfo);
+    }
 }
